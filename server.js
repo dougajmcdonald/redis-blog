@@ -1,7 +1,6 @@
 
 var app = require('express')();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
 var Redis = require('ioredis');
 
 var redis = new Redis({
@@ -12,13 +11,9 @@ var redis = new Redis({
 });
 
 app.get('/', function(req, res) {
-
   redis.get('index', function (err, result) {
-    //console.log(result);
     res.send(result);
   });
-
-  //res.sendFile(__dirname + '/index.html');
 });
 
 
