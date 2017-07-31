@@ -4,7 +4,7 @@ var http = require('http').Server(app);
 var Redis = require('ioredis');
 
 var redis = new Redis({
-  port: 6380,
+  port: 6379,
   host: 'dougmcdonald.redis.cache.windows.net',
   family: 4,
   password: 'mSSiiSPJ9tszsEmX0lSCZD96Bv/yX3lTb6RC/Z35ISo='
