@@ -12,6 +12,8 @@ var redis = new Redis({
 
 app.get('/', function(req, res) {
   redis.get('index', function (err, result) {
+    console.log('err', err);
+    console.log('result', result);
     res.send(result);
   });
 });
